@@ -34,5 +34,7 @@ public class Day1 {
                             break;
                     }
         while (!found);
+
+        sc.close();
     }
 }
