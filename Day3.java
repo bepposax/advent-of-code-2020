@@ -25,6 +25,7 @@ public class Day3 {
                 trees++;
         } while (sc.hasNextLine());
 
+        sc.close();
         return trees;
     }
 
