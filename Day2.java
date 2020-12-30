@@ -14,7 +14,6 @@ public class Day2 {
         line = new String[4];
 
         System.out.print("Part 1 solution: " + validate1() + "\nPart 2 solution: " + validate2());
-        sc.close();
     }
 
     public static int validate1() throws FileNotFoundException {
@@ -31,6 +30,7 @@ public class Day2 {
             if (num >= min && num <= max)
                 validPwds++;
         }
+        sc.close();
         return validPwds;
     }
 
@@ -48,6 +48,7 @@ public class Day2 {
             if ((password.charAt(min - 1) == letter) ^ (password.charAt(max - 1) == letter))
                 validPwds++;
         }
+        sc.close();
         return validPwds;
     }
 }
