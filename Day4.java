@@ -15,7 +15,7 @@ public class Day4 {
 
     private static int solution1() throws FileNotFoundException {
         sc = new Scanner(data);
-        int validPassports = 0, fields = 0;
+        int validPassports = 0, validFields = 0;
         String line;
 
         while (sc.hasNextLine()) {
@@ -24,14 +24,14 @@ public class Day4 {
             if (!line.isEmpty()) {
                 for (String s : line.split(" "))
                     if (!s.split(":")[0].equals("cid"))
-                        fields++;
+                        validFields++;
             } else {
-                if (fields == 7)
+                if (validFields == 7)
                     validPassports++;
-                fields = 0;
+                validFields = 0;
             }
         }
-        if (fields == 7) // last line
+        if (validFields == 7) // last line
             validPassports++;
 
         sc.close();
@@ -40,7 +40,7 @@ public class Day4 {
 
     private static int solution2() throws FileNotFoundException {
         sc = new Scanner(data);
-        int validPassports = 0, fields = 0;
+        int validPassports = 0, validFields = 0;
         String line;
 
         while (sc.hasNextLine()) {
@@ -57,21 +57,21 @@ public class Day4 {
                                 if (value.length() == 4) {
                                     int year = Integer.parseInt(value);
                                     if (year >= 1920 && year <= 2002)
-                                        fields++;
+                                        validFields++;
                                 }
                                 break;
                             case ("iyr"):
                                 if (value.length() == 4) {
                                     int year = Integer.parseInt(value);
                                     if (year >= 2010 && year <= 2020)
-                                        fields++;
+                                        validFields++;
                                 }
                                 break;
                             case ("eyr"):
                                 if (value.length() == 4) {
                                     int year = Integer.parseInt(value);
                                     if (year >= 2020 && year <= 2030)
-                                        fields++;
+                                        validFields++;
                                 }
                                 break;
                             case ("hgt"):
@@ -90,33 +90,33 @@ public class Day4 {
                                 } else
                                     break;
                                 if (quantity >= min && quantity <= max)
-                                    fields++;
+                                    validFields++;
                                 break;
                             case ("hcl"):
                                 if (value.matches("^#[[0-9]|[a-f]]{6}"))
-                                    fields++;
+                                    validFields++;
                                 break;
                             case ("ecl"):
                                 String[] colors = { "amb", "blu", "brn", "gry", "grn", "hzl", "oth" };
                                 for (String color : colors)
                                     if (value.equals(color)) {
-                                        fields++;
+                                        validFields++;
                                         break;
                                     }
                                 break;
                             case ("pid"):
                                 if (value.matches("[0-9]{9}"))
-                                    fields++;
+                                    validFields++;
                                 break;
                         }
                 }
             } else {
-                if (fields == 7)
+                if (validFields == 7)
                     validPassports++;
-                fields = 0;
+                validFields = 0;
             }
         }
-        if (fields == 7) // last line
+        if (validFields == 7) // last line
             validPassports++;
 
         sc.close();
