@@ -2,8 +2,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-import com.mysql.cj.x.protobuf.MysqlxCrud.Column;
-
 public class Day5 {
     private static File data;
     private static Scanner sc;
