@@ -57,7 +57,7 @@ public class Day5 {
         return maxId;
     }
 
-    private static int solution2() throws FileNotFoundException {
+    private static int solution2() {
         Collections.sort(list);
 
         for (int i = 0; i < list.size() - 1; ++i)
