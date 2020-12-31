@@ -1,5 +1,5 @@
 # Advent-Of-Code
 
-Advent of code 2020 puzzles
+My Advent of code 2020 solutions in Java
 
 https://adventofcode.com/2020
