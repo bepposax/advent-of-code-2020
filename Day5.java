@@ -1,13 +1,17 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Day5 {
     private static File data;
     private static Scanner sc;
+    private static ArrayList<Integer> list;
 
     public static void main(String[] args) throws FileNotFoundException {
         data = new File("Day5.dat");
+        list = new ArrayList<Integer>();
 
         System.out.println("Part1 solution: " + solution1());
         System.out.println("Part2 solution: " + solution2());
@@ -44,7 +48,9 @@ public class Day5 {
             }
             column = min;
 
-            if ((id = row * 8 + column) > maxId)
+            id = row * 8 + column;
+            list.add(id);
+            if (id > maxId)
                 maxId = id;
         }
 
@@ -52,6 +58,11 @@ public class Day5 {
     }
 
     private static int solution2() throws FileNotFoundException {
+        Collections.sort(list);
+
+        for (int i = 0; i < list.size() - 1; ++i)
+            if (list.get(i + 1) - list.get(i) > 1)
+                return list.get(i) + 1;
         return 0;
     }
 }
