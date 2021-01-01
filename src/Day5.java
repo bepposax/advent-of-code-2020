@@ -1,3 +1,5 @@
+package src;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -10,7 +12,7 @@ public class Day5 {
     private static ArrayList<Integer> list;
 
     public static void main(String[] args) throws FileNotFoundException {
-        data = new File("Day5.dat");
+        data = new File("data/Day5.dat");
         list = new ArrayList<Integer>();
 
         System.out.println("Part1 solution: " + solution1());

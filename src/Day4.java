@@ -1,3 +1,5 @@
+package src;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -7,7 +9,7 @@ public class Day4 {
     private static Scanner sc;
 
     public static void main(String[] args) throws FileNotFoundException {
-        data = new File("Day4.dat");
+        data = new File("data/Day4.dat");
 
         System.out.println("Part1 solution: " + solution1());
         System.out.println("Part2 solution: " + solution2());

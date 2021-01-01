@@ -1,3 +1,5 @@
+package src;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -8,7 +10,7 @@ public class Day1 {
 
     public static void main(String[] args) throws FileNotFoundException {
         ArrayList<Integer> list = new ArrayList<Integer>();
-        File data = new File("Day1.dat");
+        File data = new File("data/Day1.dat");
         Scanner sc = new Scanner(data);
 
         while (sc.hasNextInt())

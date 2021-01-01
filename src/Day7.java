@@ -1,3 +1,5 @@
+package src;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -11,7 +13,7 @@ public class Day7 {
     private static int found = 0;
 
     public static void main(String[] args) throws FileNotFoundException {
-        data = new File("Day7.dat");
+        data = new File("data/Day7.dat");
 
         System.out.println("Part1 solution: " + solution1());
         System.out.println("Part2 solution: " + solution2());
@@ -48,7 +50,6 @@ public class Day7 {
 
     private static int solution2() throws FileNotFoundException {
         sc = new Scanner(data);
-
         return 0;
     }
 }
