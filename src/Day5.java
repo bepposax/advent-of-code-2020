@@ -12,7 +12,7 @@ public class Day5 {
     private static ArrayList<Integer> list;
 
     public static void main(String[] args) throws FileNotFoundException {
-        data = new File("data/Day5.dat");
+        data = new File("data/d5.txt");
         list = new ArrayList<Integer>();
 
         System.out.println("Part1 solution: " + solution1());

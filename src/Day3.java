@@ -9,7 +9,7 @@ public class Day3 {
     public static Scanner sc;
 
     public static void main(String[] args) throws FileNotFoundException {
-        data = new File("data/Day3.dat");
+        data = new File("data/d3.txt");
 
         System.out.println("Part1 solution: " + solution1(3, 1));
         System.out.println("Part2 solution: " + solution2());

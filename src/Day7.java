@@ -13,7 +13,7 @@ public class Day7 {
     private static int found = 0;
 
     public static void main(String[] args) throws FileNotFoundException {
-        data = new File("data/Day7.dat");
+        data = new File("data/d7.txt");
 
         System.out.println("Part1 solution: " + solution1());
         System.out.println("Part2 solution: " + solution2());

@@ -10,7 +10,7 @@ public class Day1 {
 
     public static void main(String[] args) throws FileNotFoundException {
         ArrayList<Integer> list = new ArrayList<Integer>();
-        File data = new File("data/Day1.dat");
+        File data = new File("data/d1.txt");
         Scanner sc = new Scanner(data);
 
         while (sc.hasNextInt())
